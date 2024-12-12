@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Calculadora {
+
+}
+
+interface Operacion {
+
+}
+
+class Suma{
+}
+class Resta{
+}
+class Multiplicacion{
+}
+class Division{}
+
+interface Numero{}
+
+class Decimal{}
+
+class Binario{}
+
+class Hexagecimal{}
+
+class Romano{}
+
+class Imaginario{}
+
+Calculadora --> Operacion
+Operacion -.> Numero
+
+Decimal -u|> Numero
+Binario -u|> Numero
+Hexagecimal -u|> Numero
+Romano -|> Numero
+Imaginario -|> Numero
+
+Suma -|> Operacion
+Resta -|> Operacion
+Division -|> Operacion
+Multiplicacion -|> Operacion
+
+@enduml
